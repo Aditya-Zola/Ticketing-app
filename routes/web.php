@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function () {
         // Tiket Management
         Route::resource('tickets', TiketController::class);
 
+        // Payment
+        Route::resource('payment-types', \App\Http\Controllers\Admin\PaymentTypeController::class);
+
         // Histories
         Route::get('/histories', [HistoriesController::class, 'index'])->name('histories.index');
         Route::get('/histories/{id}', [HistoriesController::class, 'show'])->name('histories.show');

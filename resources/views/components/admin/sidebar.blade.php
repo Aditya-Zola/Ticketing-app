@@ -40,6 +40,15 @@
 	</a>
 </li>
 
+<li>
+    <a href="{{ route('admin.payment-types.index') }}" class="{{ request()->routeIs('admin.payment-types.*') ? 'active' : '' }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        </svg>
+        Pembayaran
+    </a>
+</li>
+
             <!-- History item -->
 <li class="{{ request()->routeIs('admin.histories.*') ? 'bg-gray-200 rounded-lg' : '' }}">
 	<a href="{{ route('admin.histories.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="History">
@@ -50,6 +59,8 @@
 		<span class="is-drawer-close:hidden">History Pembelian</span>
 	</a>
 </li>
+
+
         </ul>
 
         <!-- logout -->
